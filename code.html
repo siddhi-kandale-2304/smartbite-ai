@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SmartBite AI - Eat Smart. Live Better.</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#a5c8ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#005fae",
+            "surface-dim": "#d8dadc",
+            "inverse-surface": "#2d3133",
+            "on-secondary-fixed-variant": "#004785",
+            "surface-container-high": "#e6e8ea",
+            "surface-tint": "#006e2f",
+            "surface-bright": "#f7f9fb",
+            "on-error": "#ffffff",
+            "primary-fixed": "#6bff8f",
+            "on-secondary-container": "#003666",
+            "on-tertiary-fixed": "#410001",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#ffb4a9",
+            "primary": "#006e2f",
+            "surface-variant": "#e0e3e5",
+            "primary-container": "#22c55e",
+            "tertiary-fixed": "#ffdad5",
+            "on-tertiary-container": "#76231b",
+            "surface": "#f7f9fb",
+            "error-container": "#ffdad6",
+            "on-surface": "#191c1e",
+            "on-primary-fixed": "#002109",
+            "on-background": "#191c1e",
+            "inverse-primary": "#4ae176",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#d4e3ff",
+            "surface-container": "#eceef0",
+            "tertiary-container": "#ff8b7c",
+            "secondary-container": "#53a0fd",
+            "outline-variant": "#bccbb9",
+            "tertiary": "#9e4036",
+            "on-secondary-fixed": "#001c3a",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "inverse-on-surface": "#eff1f3",
+            "primary-fixed-dim": "#4ae176",
+            "on-tertiary-fixed-variant": "#7f2a21",
+            "surface-container-highest": "#e0e3e5",
+            "outline": "#6d7b6c",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#3d4a3d",
+            "on-primary-fixed-variant": "#005321",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#004b1e",
+            "background": "#f7f9fb"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand-font {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(24px);
+    }
+
+    .ambient-shadow {
+      box-shadow: 0 16px 48px rgba(25, 28, 30, 0.06);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+  <!-- Top Navigation Shell -->
+  <nav class="fixed top-0 w-full z-50 glass-nav shadow-xl shadow-zinc-900/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black text-zinc-900 tracking-tighter brand-font">SmartBite AI</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-green-700 font-bold border-b-2 border-green-600 transition-all" href="#">Dashboard</a>
+        <a class="text-zinc-500 font-medium hover:text-green-600 transition-colors duration-300" href="#">Nutrition</a>
+        <a class="text-zinc-500 font-medium hover:text-green-600 transition-colors duration-300" href="#">Recipes</a>
+        <a class="text-zinc-500 font-medium hover:text-green-600 transition-colors duration-300" href="#">Community</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="hidden sm:block text-zinc-500 font-medium hover:text-zinc-900 transition-all">Sign In</button>
+        <button
+          class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all shadow-lg shadow-primary/20">Get
+          Started</button>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+    <!-- Hero Section -->
+    <section class="mb-24">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-4">
+          What do you want to <span class="text-primary">eat</span> today?
+        </h1>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto font-medium">Eat Smart. Live Better. Our AI analyzes
+          your mood and goals to curate the perfect meal journey.</p>
+      </div>
+      <div
+        class="bg-surface-container-low rounded-xl p-8 md:p-12 ambient-shadow max-w-4xl mx-auto relative overflow-hidden">
+        <!-- Background Decorative Glow -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+          <!-- Search Input -->
+          <div class="md:col-span-12">
+            <label class="block text-sm font-bold text-on-surface-variant mb-2 ml-2">Search Food or Ingredients</label>
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+              <input id="foodInput"
+                class="w-full bg-surface-container-lowest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary transition-all ambient-shadow text-lg"
+                placeholder="e.g. Avocado Toast with Egg" type="text" />
+            </div>
+          </div>
+          <!-- Goal Selection -->
+          <div class="md:col-span-6">
+            <label class="block text-sm font-bold text-on-surface-variant mb-2 ml-2">Your Current Goal</label>
+            <select
+              class="w-full bg-surface-container-lowest border-none rounded-md py-4 px-4 focus:ring-2 focus:ring-primary transition-all ambient-shadow appearance-none">
+              <option>Weight Loss</option>
+              <option>Muscle Gain</option>
+              <option>General Health</option>
+            </select>
+          </div>
+          <!-- Mood Selection -->
+          <div class="md:col-span-6">
+            <label class="block text-sm font-bold text-on-surface-variant mb-2 ml-2">How are you feeling?</label>
+            <div class="flex gap-4 justify-between">
+              <button type="button"
+                class="mood-btn flex-1 bg-surface-container-lowest py-3 rounded-md flex flex-col items-center gap-1 active:scale-95 transition-all ambient-shadow border-2 border-transparent">
+                <span class="material-symbols-outlined text-yellow-500" data-weight="fill">sentiment_satisfied</span>
+                <span class="text-xs font-bold text-on-surface-variant">Happy</span>
+              </button>
+              <button type="button"
+                class="mood-btn flex-1 bg-surface-container-lowest py-3 rounded-md flex flex-col items-center gap-1 active:scale-95 transition-all ambient-shadow border-2 border-transparent hover:border-primary/20">
+                <span class="material-symbols-outlined text-blue-400" data-weight="fill">bedtime</span>
+                <span class="text-xs font-bold text-on-surface-variant">Tired</span>
+              </button>
+              <button type="button"
+                class="mood-btn flex-1 bg-surface-container-lowest py-3 rounded-md flex flex-col items-center gap-1 active:scale-95 transition-all ambient-shadow border-2 border-transparent hover:border-primary/20">
+                <span class="material-symbols-outlined text-zinc-400" data-weight="fill">sentiment_dissatisfied</span>
+                <span class="text-xs font-bold text-on-surface-variant">Sad</span>
+              </button>
+            </div>
+          </div>
+          <div class="md:col-span-12 mt-4">
+            <button id="analyzeBtn"
+              class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-5 rounded-full text-xl font-bold active:scale-95 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3">
+              <span class="material-symbols-outlined">analytics</span>
+              Analyze Food
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bento Results Section -->
+    <section id="resultsSection" class="mb-24 hidden">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">Nutrition Analysis</h2>
+          <p id="analysisLabel" class="text-on-surface-variant font-medium">Awaiting your search...</p>
+        </div>
+        <div class="hidden md:block">
+          <span
+            class="bg-primary-container/20 text-on-primary-container px-4 py-2 rounded-full text-sm font-bold">Live Data</span>
+        </div>
+      </div>
+      <div id="results" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Health Score Orb -->
+        <div
+          class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl p-8 ambient-shadow relative overflow-hidden flex flex-col items-center justify-center min-h-[400px]">
+          <div class="absolute inset-0 flex items-center justify-center opacity-20">
+            <div class="w-64 h-64 bg-secondary rounded-full blur-[100px]"></div>
+          </div>
+          <div class="relative z-10 text-center">
+            <div class="relative inline-block mb-6">
+              <svg class="w-48 h-48 -rotate-90">
+                <circle class="text-surface-container-low" cx="96" cy="96" fill="transparent" r="88"
+                  stroke="currentColor" stroke-width="12"></circle>
+                <circle id="healthScoreOrb" class="text-primary transition-all duration-1000" cx="96" cy="96" fill="transparent" r="88"
+                  stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="552.92" stroke-width="12"></circle>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <span class="text-6xl font-black brand-font"><span id="healthScoreValue">0</span><span class="text-3xl">/10</span></span>
+                <span class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Health Score</span>
+              </div>
+            </div>
+            <h3 id="healthScoreTitle" class="text-2xl font-bold mb-2">Loading...</h3>
+            <p id="healthScoreMsg" class="text-on-surface-variant px-8 font-medium">Please wait.</p>
+          </div>
+        </div>
+        <!-- Macro Cards -->
+        <div
+          class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow flex flex-col justify-between border-l-4 border-primary">
+          <div>
+            <span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Calories</span>
+            <div id="macroCalories" class="text-4xl font-black mt-2 brand-font">0</div>
+          </div>
+          <div class="w-full bg-surface-container-low h-1.5 rounded-full mt-4 overflow-hidden">
+            <div class="bg-primary h-full w-[65%]"></div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow flex flex-col justify-between border-l-4 border-secondary">
+          <div>
+            <span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Protein</span>
+            <div id="macroProtein" class="text-4xl font-black mt-2 brand-font">0g</div>
+          </div>
+          <div class="w-full bg-surface-container-low h-1.5 rounded-full mt-4 overflow-hidden">
+            <div class="bg-secondary h-full w-[40%]"></div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow flex flex-col justify-between border-l-4 border-tertiary-container">
+          <div>
+            <span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Carbs</span>
+            <div id="macroCarbs" class="text-4xl font-black mt-2 brand-font">0g</div>
+          </div>
+          <div class="w-full bg-surface-container-low h-1.5 rounded-full mt-4 overflow-hidden">
+            <div class="bg-tertiary-container h-full w-[55%]"></div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow flex flex-col justify-between border-l-4 border-error">
+          <div>
+            <span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Fats</span>
+            <div id="macroFats" class="text-4xl font-black mt-2 brand-font">0g</div>
+          </div>
+          <div class="w-full bg-surface-container-low h-1.5 rounded-full mt-4 overflow-hidden">
+            <div class="bg-error h-full w-[70%]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AI Recipe Generated Section -->
+    <section id="recipeSection" class="mb-24 hidden">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold tracking-tight">AI Generated Recipe</h2>
+        <p class="text-on-surface-variant font-medium">A healthy recipe using your available ingredients.</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow border-l-4 border-primary">
+        <h3 id="recipeTitle" class="text-2xl font-bold mb-4 text-primary">Recipe Title</h3>
+        <p class="font-bold mb-2">Ingredients:</p>
+        <ul id="recipeIngredients" class="list-disc pl-5 mb-6 text-on-surface-variant font-medium space-y-1">
+        </ul>
+        <div class="bg-surface-container-low p-6 rounded-xl">
+           <p class="font-bold mb-4 text-sm uppercase tracking-wider text-on-surface-variant">Step by step instructions</p>
+           <ol id="recipeSteps" class="list-decimal pl-5 text-on-surface-variant font-medium space-y-3">
+           </ol>
+        </div>
+      </div>
+    </section>
+    <!-- Suggestions Section -->
+    <section id="alternativesSection" class="hidden">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold tracking-tight">Smarter Alternatives</h2>
+        <p class="text-on-surface-variant font-medium">Optimize your nutrition with this curated swap.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Alternative Card 1 (Dynamic) -->
+        <div id="altCard1"
+          class="group bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow flex flex-col h-full transform transition-transform hover:-translate-y-2 md:col-span-1">
+          <div class="h-48 overflow-hidden">
+            <img id="altCard1Image" alt="Alternative Food" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNJDTPiojt49b4_k33GbN077rF4GhMc-qAedMhJEH4A7PF1PSDjhKsIVrmJPY1Q9vfK6Im_D2iIphtCIE7XxGowR7EN7fTfHiUAlFAgPnjJyvAIhj9XNVTYWQElESCgMio0_PnuUK18EaUTdTlXFdQArFAljsKD0QAWCCl2GdPcvoaSMmrA0Vu9jFM9CtWcTPwymJMccrho0ULY6GR0P7mMqZIGQNiwoBSIyGvAJnoQBixcbAjV8QwWYeFDByeSfckCS11_u4JPco" />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-4">
+              <h3 id="altCard1Title" class="text-xl font-bold">Alternative Name</h3>
+              <span id="altCard1Tag" class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-bold">+0g</span>
+            </div>
+            <p id="altCard1Desc" class="text-on-surface-variant text-sm flex-grow font-medium leading-relaxed mb-6">Description of why this is a good alternative.</p>
+            <button type="button" class="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
+              View Info <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Shell -->
+  <footer class="w-full border-t border-zinc-200 bg-zinc-50 dark:bg-zinc-950">
+    <div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-center md:text-left">
+        <span class="font-manrope font-bold text-zinc-900 block mb-1">SmartBite AI</span>
+        <p class="font-inter text-sm text-zinc-500">SmartBite AI - Eat Smart. Live Better. Built for the Health-Tech
+          Global Hackathon.</p>
+      </div>
+      <div class="flex gap-8">
+        <a class="text-zinc-500 hover:text-zinc-900 underline underline-offset-4 text-sm font-inter transition-colors"
+          href="#">Privacy Policy</a>
+        <a class="text-zinc-500 hover:text-zinc-900 underline underline-offset-4 text-sm font-inter transition-colors"
+          href="#">Terms of Service</a>
+        <a class="text-zinc-500 hover:text-zinc-900 underline underline-offset-4 text-sm font-inter transition-colors"
+          href="#">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
